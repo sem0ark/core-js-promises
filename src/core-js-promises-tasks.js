@@ -70,8 +70,8 @@ function getFirstResolvedPromiseResult(promises) {
  *
  * @param {Array<Promise<number>>} promises
  * @return {Promise<number>}
- *
  * @example:
+ *
  * const promise1 = Promise.resolve(1)
  * const promise2 = Promise.reject(2)
  * const promise3 = new Promise((resolve) => setTimeout(() => resolve(3), 50))
@@ -85,7 +85,7 @@ function getFirstResolvedPromiseResult(promises) {
  * [promise3, promise4, promise6] => Promise rejected with 6
  */
 function getFirstPromiseResult(promises) {
-  throw Promise.any(promises);
+  return Promise.any(promises);
 }
 
 /**
